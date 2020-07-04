@@ -30,7 +30,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   text-align: center;
-  color: #2c3e50;
   width: 100%;
   height: 100%;
   
@@ -56,6 +55,7 @@ body {
   position: relative;
   text-align: center;
   top: 9em;
+  color: white;
 }
   #header h1{
     font-size: 4.35em;
