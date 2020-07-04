@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="bg"></div>
-    <header id="header">
+    <header class="noselect" id="header">
       <h1>Michael Wallace</h1>
       <p>Developer  •  Techie  •  Mastermind</p>
     </header>
@@ -17,8 +17,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url('assets/css/animations.scss');
 
 body {
   margin: 0;
@@ -28,8 +30,8 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
   text-align: center;
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   
@@ -56,18 +58,20 @@ body {
   text-align: center;
   top: 9em;
   color: white;
-}
-  #header h1{
+  margin: auto;
+  
+  h1 {
     font-size: 4.35em;
     font-weight: 900;
     letter-spacing: -0.035em;
     line-height: 1em;
   }
-  #header p {
+  p {
     font-size: 1.25em;
     margin: 0.75em 0 0.25em 0;
     opacity: 0.75; 
   }
+}
 
 #bg {
   -moz-animation: bg 60s linear infinite;
@@ -92,110 +96,14 @@ body {
   top: 0;
 }
 
-/* BACKGROUND IMAGE */
-@-moz-keyframes bg {
-  0% {
-    -moz-transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0); }
-  100% {
-    -moz-transform: translate3d(-2250px,0,0);
-    -webkit-transform: translate3d(-2250px,0,0);
-    -ms-transform: translate3d(-2250px,0,0);
-    transform: translate3d(-2250px,0,0); } }
-
-@-webkit-keyframes bg {
-  0% {
-    -moz-transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0); }
-  100% {
-    -moz-transform: translate3d(-2250px,0,0);
-    -webkit-transform: translate3d(-2250px,0,0);
-    -ms-transform: translate3d(-2250px,0,0);
-    transform: translate3d(-2250px,0,0); } }
-
-@-ms-keyframes bg {
-  0% {
-    -moz-transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0); }
-  100% {
-    -moz-transform: translate3d(-2250px,0,0);
-    -webkit-transform: translate3d(-2250px,0,0);
-    -ms-transform: translate3d(-2250px,0,0);
-    transform: translate3d(-2250px,0,0); } }
-
-@keyframes bg {
-  0% {
-    -moz-transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0); }
-  100% {
-    -moz-transform: translate3d(-2250px,0,0);
-    -webkit-transform: translate3d(-2250px,0,0);
-    -ms-transform: translate3d(-2250px,0,0);
-    transform: translate3d(-2250px,0,0); } }
-
-@-moz-keyframes header {
-  0% {
-    -moz-transform: translate3d(0,1em,0);
-    -webkit-transform: translate3d(0,1em,0);
-    -ms-transform: translate3d(0,1em,0);
-    transform: translate3d(0,1em,0);
-    opacity: 0; }
-  100% {
-    -moz-transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    opacity: 1; } }
-
-@-webkit-keyframes header {
-  0% {
-    -moz-transform: translate3d(0,1em,0);
-    -webkit-transform: translate3d(0,1em,0);
-    -ms-transform: translate3d(0,1em,0);
-    transform: translate3d(0,1em,0);
-    opacity: 0; }
-  100% {
-    -moz-transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    opacity: 1; } }
-
-/* HEADER */
-@-ms-keyframes header {
-  0% {
-    -moz-transform: translate3d(0,1em,0);
-    -webkit-transform: translate3d(0,1em,0);
-    -ms-transform: translate3d(0,1em,0);
-    transform: translate3d(0,1em,0);
-    opacity: 0; }
-  100% {
-    -moz-transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    opacity: 1; } }
-
-@keyframes header {
-  0% {
-    -moz-transform: translate3d(0,1em,0);
-    -webkit-transform: translate3d(0,1em,0);
-    -ms-transform: translate3d(0,1em,0);
-    transform: translate3d(0,1em,0);
-    opacity: 0; }
-  100% {
-    -moz-transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    opacity: 1; } }
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 
 </style>
