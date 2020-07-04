@@ -46,6 +46,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+
   
 }
 
@@ -88,7 +89,7 @@ body {
 
 .icons {
   position: relative;
-  top: 15em;
+  top: 14em;
   display: flex;
   flex-direction: row;
   justify-content: center;
