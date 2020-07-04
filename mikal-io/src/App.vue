@@ -6,10 +6,10 @@
       <p>Developer  •  Techie  •  Mastermind</p>
     </header>
     <ul class="icons">
-      <li><a target="_blank" href="https://github.com/mtwallac"><font-awesome-icon :icon="['fab', 'github']" size="2x" /></a></li>
-      <li><a target="_blank" href="https://www.linkedin.com/in/michael-wallace-81004212b/"><font-awesome-icon :icon="['fab', 'linkedin-in']" size="2x" /></a></li>
-      <li><a href="#"><font-awesome-icon :icon="['far', 'folder-open']" size="2x" /></a></li>
-      <li><a href="#"><font-awesome-icon :icon="['far', 'envelope']" size="2x" /></a></li>
+      <li @click="nagivate('https://github.com/mtwallac')"><font-awesome-icon :icon="['fab', 'github']" size="2x" /></li>
+      <li @click="nagivate('https://www.linkedin.com/in/michael-wallace-81004212b/')"><font-awesome-icon :icon="['fab', 'linkedin-in']" size="2x" /></li>
+      <li><font-awesome-icon :icon="['far', 'folder-open']" size="2x" /></li>
+      <li><font-awesome-icon :icon="['far', 'envelope']" size="2x" /></li>
     </ul>
     
   </div>
@@ -20,6 +20,11 @@
 export default {
   name: 'App',
   components: {
+  },
+  methods: {
+    nagivate: function (URL) {
+      window.open(URL, '_blank');
+    }
   }
 }
 </script>
