@@ -5,6 +5,12 @@
       <h1>Michael Wallace</h1>
       <p>Developer  •  Techie  •  Mastermind</p>
     </header>
+    <ul class="icons">
+      <li><a target="_blank" href="https://github.com/mtwallac"><font-awesome-icon :icon="['fab', 'github']" size="3x" /></a></li>
+      <li><a target="_blank" href="https://www.linkedin.com/in/michael-wallace-81004212b/"><font-awesome-icon :icon="['fab', 'linkedin-in']" size="3x" /></a></li>
+      <li><a href="#"><font-awesome-icon :icon="['far', 'folder-open']" size="3x" /></a></li>
+    </ul>
+    
   </div>
 </template>
 
@@ -70,6 +76,27 @@ body {
     font-size: 1.25em;
     margin: 0.75em 0 0.25em 0;
     opacity: 0.75; 
+  }
+}
+
+.icons {
+  position: relative;
+  top: 10em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+  color: white;
+
+  li {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    a {
+      color: white;
+    }
   }
 }
 
