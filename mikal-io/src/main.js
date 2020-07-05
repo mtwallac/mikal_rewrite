@@ -5,10 +5,12 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFolderOpen, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VModal from 'vue-js-modal'
 
 library.add(faGithub, faLinkedinIn, faFolderOpen, faEnvelope)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.use(VModal)
 
 Vue.config.productionTip = false
 

@@ -11,7 +11,13 @@
       <li><font-awesome-icon :icon="['far', 'folder-open']" size="2x" /></li>
       <li><font-awesome-icon :icon="['far', 'envelope']" size="2x" /></li>
     </ul>
-    
+    <modal name="hello-world"
+           :width='auto'
+           :height='auto'
+           @opened='show'
+           @closed='hide'>
+      hello, world!
+    </modal>
   </div>
 </template>
 
@@ -22,9 +28,18 @@ export default {
   components: {
   },
   methods: {
-    nagivate: function (URL) {
+    nagivate(URL) {
       window.open(URL, '_blank');
+    },
+    show() {
+      this.$modal.show('hello-world');
+    },
+    hide() {
+      this.$modal.hide('hello-world');
     }
+  },
+  created: function () {
+    this.$modal.show('hello-world')
   }
 }
 </script>
