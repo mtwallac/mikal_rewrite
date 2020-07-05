@@ -1,3 +1,28 @@
+/* Wrapper */
+@-moz-keyframes wrapper {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  
+  @-webkit-keyframes wrapper {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  
+  @-ms-keyframes wrapper {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  
+  @keyframes wrapper {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+
 /* BACKGROUND IMAGE */
 @-moz-keyframes bg {
     0% {
