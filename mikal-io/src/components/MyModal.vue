@@ -5,6 +5,8 @@
         :height='auto'
         :minWidth="150"
         :minHeight="150"
+        :maxWidth="1000"
+        :maxHeight="500"
         :resizable="true"
         :clickToClose='false'
         @opened='show'
@@ -21,7 +23,7 @@
               <input type="text" placeholder="Subject" name="subject-input" v-model="subject" class="subject-input">
             </div>
             <div class="body">
-              <input type="text" placeholder="Your Message" name="body-input" v-model="body" class="body-input">
+              <textarea placeholder="Your Message" name="body-input" v-model="body" class="body-input" />
             </div>
           </div>
         </modal>
@@ -35,7 +37,8 @@ export default {
       return {
         email: '',
         subject: '',
-        body: ''
+        body: '',
+        message: ''
       }
     },
     methods: {
@@ -57,10 +60,6 @@ export default {
   @import url('../assets/css/close-btn.scss');
   .my-modal {
     position: absolute;
-
-    .vm--modal {
-      border-radius: 1% !important;
-    }
 
     .modal-header {
       background: rgb(90, 43, 116);
@@ -111,12 +110,15 @@ export default {
       flex-wrap: wrap;
       width: 100%;
       height: 92%;
+      align-items: flex-start;
+      align-content: flex-start;
       
       .email {
         width: 49%;
-        height: 30px;
+        height: 26px;
         text-align: left;
-        margin-right: 1%;
+        margin-right: 0.8%;
+        margin-left: 1px;
 
         .email-input {
           width: 99%;
@@ -127,7 +129,7 @@ export default {
       }
       .subject {
         width: 49%;
-        height: 30px;
+        height: 26px;
         text-align: left;
 
         .subject-input {
@@ -139,12 +141,13 @@ export default {
       }
       .body {
         width: 100%;
-        height: 80%;
+        height: 90%;
         align-self: flex-start;
 
         .body-input {
-          width: 95%;
-          height: 95%;
+          width: 99%;
+          height: 99%;
+          resize: none;
         }
         textarea:focus, input:focus{
           outline: none;
