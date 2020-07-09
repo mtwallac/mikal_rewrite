@@ -42,6 +42,10 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 100%; 
+  -moz-animation: wrapper 3s forwards;
+  -webkit-animation: wrapper 3s forwards;
+  -ms-animation: wrapper 3s forwards;
+  animation: wrapper 3s forwards;
 }
 
 .header-component {
