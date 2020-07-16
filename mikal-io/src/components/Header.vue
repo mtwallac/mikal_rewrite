@@ -9,12 +9,7 @@
 
 <script>
 export default {
-  name: 'Header',
-  methods: {
-    nagivate(URL) {
-      window.open(URL, '_blank');
-    }
-  }
+  name: 'Header'
 }
 </script>
 

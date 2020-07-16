@@ -42,9 +42,6 @@ export default {
       }
     },
     methods: {
-    nagivate(URL) {
-      window.open(URL, '_blank');
-    },
     show() {
       this.$modal.show('my-modal');
     },
