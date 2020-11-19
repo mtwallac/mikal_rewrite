@@ -4,7 +4,8 @@
       <li class="github" @click="navigate('https://github.com/mtwallac')"><font-awesome-icon :icon="['fab', 'github']" size="2x" /></li>
       <li class="linkedin" @click="navigate('https://www.linkedin.com/in/michael-wallace-81004212b/')"><font-awesome-icon :icon="['fab', 'linkedin-in']" size="2x" /></li>
       <li class="portfolio" ><font-awesome-icon :icon="['far', 'folder-open']" size="2x" /></li>
-      <li class="email" @click="openEmailModal()"><font-awesome-icon :icon="['far', 'envelope']" size="2x" /></li>
+      <!-- <li class="email" @click="openEmailModal()"><font-awesome-icon :icon="['far', 'envelope']" size="2x" /></li> -->
+      <li class="email"><font-awesome-icon :icon="['far', 'envelope']" size="2x" /></li>
     </ul>
   </div>
 </template>
