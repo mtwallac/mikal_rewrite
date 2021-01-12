@@ -2,13 +2,13 @@
   <div id="app">
     <div class="bg"></div>
     <Header class="header-component"></Header>
-    <Icons class="icons-component"></Icons>
+    <IconsWrapper class="icons-component"></IconsWrapper>
     <MyModal></MyModal>
   </div>
 </template>
 
 <script>
-import Icons from './components/Icons.vue'
+import IconsWrapper from './components/IconsWrapper.vue'
 import Header from './components/Header.vue'
 import MyModal from './components/MyModal.vue'
 export default {
@@ -17,7 +17,7 @@ export default {
     return {}
   },
   components: {
-    Icons,
+    IconsWrapper,
     Header,
     MyModal
   }
